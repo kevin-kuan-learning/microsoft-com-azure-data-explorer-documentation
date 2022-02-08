@@ -1,4 +1,3 @@
-# 
 
 ## select
 
@@ -40,6 +39,14 @@ StormEvents
 | where event_count > 1800
 | project State, event_count
 | render columnchart
+```
+
+## filter
+
+```
+StormEvents
+| take 10000
+| where StartTime == datetime(2007-01-14T00:35:00Z)
 ```
 
 ## pivot table
